@@ -9,7 +9,6 @@ import StackNavigation from './Navigation';
 export default function App() {
   return (
     <View style={styles.container}>
-      
       <NavigationContainer>
           <StackNavigation/>
       </NavigationContainer>
