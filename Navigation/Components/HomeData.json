@@ -1,0 +1,129 @@
+[
+    {
+        "id":1,
+        "title":"ActivityIndicator",
+        "desc":"Displays a circular loading indicator."
+        
+    },
+    {
+        "id":2,
+        "title":"Button",
+        "desc":"A basic button component that should render nicely on any platform."
+        
+    },
+    {
+        "id":3,
+        "title":"FlatList",
+        "desc":"A component for rendering performant scrollable lists."
+        
+    },
+    {
+        "id":4,
+        "title":"Image",
+        "desc":"A component for displaying images."
+        
+    },
+    {
+        "id":5,
+        "title":"ImageBackground",
+        "desc":"A common feature request from developers familiar with the web is background-image. "
+    },
+    {
+        "id":6,
+        "title":"KeyboardAvoidingView",
+        "desc":"Provides a view that moves out of the way of the virtual keyboard automatically."
+        
+    },
+    {
+        "id":7,
+        "title":"Modal",
+        "desc":"Provides a simple way to present content above an enclosing view."
+        
+    },
+    {
+        "id":8,
+        "title":"Pressable",
+        "desc":"Pressable is a Core Component wrapper that can detect various stages of press interactions on any of its defined children."
+    },
+    {
+        "id":9,
+        "title":"RefreshControl",
+        "desc":"This component is used inside a Scrollview to add pull to referesh functionallity."
+    },
+    {
+        "id":10,
+        "title":"ScrollView",
+        "desc":"Provides a scrolling container that can host multiple components and views."
+    },
+    {
+        "id":11,
+        "title":"SectionList",
+        "desc":"Like FlatList, but for sectioned lists ."
+    },
+    {
+        "id":12,
+        "title":"StatusBar",
+        "desc":"Component to control the app's status bar. "
+    },
+    {
+        "id":13,
+        "title":"Switch",
+        "desc":"Renders a Boolean input."
+    },
+    {
+        "id":14,
+        "title":"Text",
+        "desc":"A React component for displaying text."
+    },
+    {
+        "id":15,
+        "title":"TextInput",
+        "desc":"A component for inputting text into the app via a keyboard."
+    },
+    {
+        "id":16,
+        "title":"TouchableHighlight",
+        "desc":"A wrapper for making views respond properly to touches. "
+    },
+    {
+        "id":17,
+        "title":"TouchableOpacity",
+        "desc":"A wrapper for making views respond properly to touches."
+    },
+    {
+        "id":18,
+        "title":"TouchableWithoutFeedback",
+        "desc":"Do not use unless you have a very good reason."
+    },
+    {
+        "id":19,
+        "title":"View",
+        "desc":"The most fundamental component for building a UI."
+    },
+    {
+        "id":20,
+        "title":"VirtualizedList",
+        "desc":"Virtualization massively improves memory consumption and performance of large lists by maintaining a finite render window of active items."
+    },
+    {
+        "id":21,
+        "title":"DrawerLayoutAndroid",
+        "desc":"React component that wraps the platform DrawerLayout (Android only)."
+    },
+    {
+        "id":22,
+        "title":"TouchableNativeFeedback",
+        "desc":"A wrapper for making views respond properly to touches (Android only)."
+    },
+    {
+        "id":23,
+        "title":"InputAccessoryView",
+        "desc":"A component which enables customization of the keyboard input accessory view on iOS."
+    },
+    {
+        "id":24,
+        "title":"SafeAreaView",
+        "desc":"The purpose of SafeAreaView is to render content within the safe area boundaries of a device."
+    }
+    
+]
