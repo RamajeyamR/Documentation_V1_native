@@ -23,7 +23,7 @@ export const Login = () => {
         }
       })
   
-      return unsubscribe
+      return unsubscribe()
     }
 
     

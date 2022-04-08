@@ -9,9 +9,13 @@ export default function VoiceSearch() {
   useEffect(() => {
     function onSpeechResults(e: SpeechResultsEvent) {
       setResults(e.value ?? []);
+      // toggleListening()
+      voicesearch()
     }
     function onSpeechError(e: SpeechErrorEvent) {
       console.error(e);
+      // toggleListening()
+      voicesearch()
     }
     Voice.onSpeechError = onSpeechError;
     Voice.onSpeechResults = onSpeechResults;
@@ -35,12 +39,18 @@ export default function VoiceSearch() {
     }
   }
 
+  const voicesearch = () => {
+      
+    results.map(obj => console.log("obj :", obj))
+    // setShowModal(false)
+  }
+
   return (
     <View style={styles.container}>
       <Text>Press the button and start speaking.</Text>
       <Button
         title={isListening ? 'Stop Recognizing' : 'Start Recognizing'}
-        onPress={toggleListening}
+        onPress={()=>toggleListening()}
       />
       <Text>Results:</Text>
       {results.map((result, index) => {
