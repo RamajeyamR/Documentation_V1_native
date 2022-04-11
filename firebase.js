@@ -1,6 +1,7 @@
 import { LogBox } from 'react-native';
 
 LogBox.ignoreLogs(['You are overriding the original host.']);
+LogBox.ignoreLogs(['`new NativeEventEmitter()` was called with a non-null argument without the required `removeListeners` method.']);
 LogBox.ignoreLogs([
   // eslint-disable-next-line no-useless-escape
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",

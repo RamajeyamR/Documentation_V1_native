@@ -24,25 +24,24 @@ const Search = () => {
 
     useEffect(() => {
       function onSpeechResults(e: SpeechResultsEvent) {
-        setResults(e.value ?? [], console.log("results :", results));
+        setResults(e.value ?? [], console.log("Voice Results :", results));
       }
       function onSpeechError(e: SpeechErrorEvent) {
         // console.error("error is thrown",e);
         async function callthis() {
           try {
             console.log("Wltimate try", isListening)
+            setShowModal(false); 
             if (isListening) {
               console.log("inside try")
               // await Voice.stop()
-              setIsListening(false, console.log("setIsListening False"));
-              setShowModal(false, console.log("setShowModal false")); 
-              // searchFilterFunction('');   
+              setIsListening(false);  
             } 
           
           } catch (e1) {
             console.error("error inside callthis",e1);
-            setIsListening(false, console.log("setIsListening False"));
-            setShowModal(false, console.log("setShowModal false")); 
+            setIsListening(false);
+            setShowModal(false); 
           }
         }
         callthis();
@@ -56,7 +55,6 @@ const Search = () => {
 
     useEffect(()=>{
       async function voicesearch (){
-
         for(let datas in results){
           Data.map(obj => {
             obj.title.toUpperCase() === results[datas].toUpperCase() ? searchFilterFunction(results[datas]) : null
@@ -64,11 +62,11 @@ const Search = () => {
           })
         }
 
-        setShowModal(false, console.log("setShowModal useeffect[results] false")); 
+        setShowModal(false); 
         try {
           if (isListening) {
             await Voice.stop();
-            setIsListening(false, console.log("setIsListening useeffect[results] False"));
+            setIsListening(false);
           }
         } catch (e) {
           console.error(e);
@@ -81,13 +79,13 @@ const Search = () => {
       try {
         if (isListening) {
           await Voice.stop();
-          setIsListening(false, console.log("setIsListening False"));
-          setShowModal(false, console.log("setShowModal false")); 
+          setIsListening(false);
+          setShowModal(false); 
         } else {
           setResults([]);
           await Voice.start('en-US');
-          setShowModal(true, console.log("setShowModal True")); 
-          setIsListening(true, console.log("setIsListening True"));
+          setShowModal(true); 
+          setIsListening(true);
         }
       } catch (e) {
         console.error(e);
@@ -179,7 +177,9 @@ const Search = () => {
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={ItemView}
               /> 
-              : <Text>{result}</Text>
+              : <View style={styles.noresultscontainer}>
+                  <Text style={styles.noresultstext}>{result}</Text>
+                </View>
           }
         </View>
       </View>
@@ -235,4 +235,13 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius:10,
         borderBottomRightRadius:10,
       },
+      noresultscontainer : {
+        flex:1, 
+        alignItems:"center"
+      },
+      noresultstext : {
+        color:"white", 
+        fontWeight:"bold", 
+        fontSize:25
+      }
 });
