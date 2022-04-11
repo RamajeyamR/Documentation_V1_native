@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 import { Modal, Center, NativeBaseProvider } from "native-base";
 import Voice, { SpeechResultsEvent, SpeechErrorEvent} from '@react-native-voice/voice';
+import LottieView from 'lottie-react-native';
 
 
 import Data from './Navigation/Components/HomeData.json';
@@ -56,6 +57,11 @@ const Search = () => {
     useEffect(()=>{
       async function voicesearch (){
         for(let datas in results){
+          Data.filter( item => {
+            const itemData = item.title ? item.title.toUpperCase()  : ''.toUpperCase();
+            const textData = results[datas].toUpperCase();
+            console.log("itemData.indexOf(textData) > -1 :", itemData.indexOf(textData) > -1)
+          })
           Data.map(obj => {
             obj.title.toUpperCase() === results[datas].toUpperCase() ? searchFilterFunction(results[datas]) : null
           
@@ -134,12 +140,18 @@ const Search = () => {
               >
               <Modal.Content maxWidth="400px">
                 <Modal.Body>
-                  <Ionicons
+                  <LottieView 
+                    source={require('./Lotte/91427-enable-mic.json')} 
+                    autoPlay 
+                    loop 
+                    style={{height:50,width:50, padding:70, justifyContent:"center", alignContent:"center"}}
+                  />
+                  {/* <Ionicons
                     name="mic-outline"
                     size={50}
                     color="black"
                     style={{alignSelf:"center", padding:70,}}
-                  />
+                  /> */}
                 </Modal.Body>
               </Modal.Content>
             </Modal>

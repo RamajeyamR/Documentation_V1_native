@@ -6,6 +6,9 @@ LogBox.ignoreLogs([
   // eslint-disable-next-line no-useless-escape
   "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
 ]);
+LogBox.ignoreLogs([
+  "exported from 'deprecated-react-native-prop-types'.",
+  ])
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
