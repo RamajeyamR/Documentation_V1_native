@@ -211,9 +211,13 @@ android {
             include (*reactNativeArchitectures())
         }
     }
+    
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
+            // storePassword System.console().readLine("\nKeystore password:")
+            // keyAlias System.console().readLine("\nAlias: ")
+            // keyPassword System.console().readLine("\Alias password: ")
             storePassword 'android'
             keyAlias 'androiddebugkey'
             keyPassword 'android'
